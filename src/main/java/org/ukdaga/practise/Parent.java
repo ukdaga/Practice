@@ -15,10 +15,24 @@ package org.ukdaga.practise;
 
 class Parent  {	
 	public  void print() {
-	System.out.println("Parent");	}}
-	class Child extends Parent  {	
+	System.out.println("Parent");	
+	}
+	}
+
+	class Child extends Parent  {
+		
 	public void print() {		System.out.println("Child");
 	}
 	Child c = (Child) new Parent();
+	
+	Child c1 =  new Child ();
+	Parent p1 = new Parent();
+	
+
+	public void m1()
+	{
+		c1 = (Child)(p1); // downcasting // needs check
+		p1 = (c1);  // upcasting is free
+	}
 	
 	}
